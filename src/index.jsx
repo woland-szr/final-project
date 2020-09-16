@@ -1,25 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
 import ReactDom from 'react-dom';
 
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import App from './App';
+import { BrowserRouter } from 'react-router-dom';
 
-import { UsersList } from './components/UsersList/';
-import { UserCreate } from './components/UserCreate/';
+localStorage.setItem('clientId', '09973a4c9f2f5e9e89dd058537599791');
 
-export class App extends Component {
-    render() {
-        return (
-            <div>
-                <Switch>
-                    <Route path="/" component={UsersList} exact={true} />
-                    <Route path="/create" component={UserCreate}  exact={true} />
-                </Switch>
-            </div>
-        );
-    }
-}
-
-ReactDom.render(<BrowserRouter><App /></BrowserRouter>, 
-   document.getElementById('root'),
+ReactDom.render(
+    <BrowserRouter><App /></BrowserRouter>, 
+    document.getElementById('root'),
 );
 
