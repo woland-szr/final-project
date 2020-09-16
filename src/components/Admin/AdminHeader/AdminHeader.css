@@ -1,0 +1,22 @@
+header {
+    width: 100%;
+    background-color: deepskyblue;
+}
+.header-container {
+    text-transform: uppercase;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    height: 83px;
+    max-width: 1440px;
+    margin: 0 auto; 
+}
+ul {
+    list-style: none;
+    display: flex;
+}
+
+li {
+    margin-left: 50px;
+}
