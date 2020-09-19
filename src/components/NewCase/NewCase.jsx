@@ -79,9 +79,9 @@ export class NewCase extends React.Component {
                     <input className='form_input' type="text" name="color" placeholder="Enter bike color" onChange={this.handleColorChange} value={newCase.color} />
                 </label>
                 <div className='form_label for_select'> Choose bike type <br />
-                    <input className='form_input' type="radio" name="type" id="type1" value="general" defaultChecked onChange={this.handleTypeChange} /> General
+                    <input className='form_radio' type="radio" name="type" id="type1" value="general" defaultChecked onChange={this.handleTypeChange} /> General
 
-                    <input className='form_input' type="radio" name="type" id="type2" value="sport" onChange={this.handleTypeChange} /> Sport
+                    <input className='form_radio' type="radio" name="type" id="type2" value="sport" onChange={this.handleTypeChange} /> Sport
 
                 </div>
                 </div>

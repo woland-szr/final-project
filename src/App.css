@@ -78,3 +78,17 @@ body {
     color: lightgray;
     cursor: default;
 }
+
+@media only screen and (max-width : 700px) {
+    .form_input {
+        width: 100%;
+    }
+    .form_label {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .form_block {
+        margin-top: 0px;
+        padding: 15px;
+    }
+}
