@@ -112,6 +112,13 @@ export class Cases extends Component {
 
                             title='Cases'
 
+                            options={{
+                                headerStyle: {
+                                  backgroundColor: '#0D9488',
+                                  color: '#FFF'
+                                }
+                              }}
+
                             detailPanel={[
                                 {
                                   tooltip: 'Show Name',
@@ -123,17 +130,36 @@ export class Cases extends Component {
                                         let officerName = officers[rowData.officer]
                                     return (
                                       <div className={className}>
-                                        Case date: {rowData.date.slice(0,10)}<br />
-                                        Owner: {rowData.ownerFullName}<br />
-                                        License number: {rowData.licenseNumber}<br />
-                                        Type: {rowData.type}<br />
-                                        Color: {rowData.color}<br />
-                                        Description: {rowData.description}<br />
-                                        <hr />
-                                        Case created: {rowData.createdAt.slice(0,10)}<br />
-                                        Case updated: {rowData.updateAt.slice(0,10)}<br />
-                                        Officer: {officerName}<br />
-                                        Resolution: {rowData.resolution}
+                                            <div className='detail_group'>
+                                                <div className='detail_left'>
+                                                    Case date:<br />
+                                                    Owner:<br />
+                                                    License number:<br />
+                                                    Type:<br />
+                                                    Color:
+                                                </div>
+                                                <div className='detail_right'>
+                                                    {rowData.date.slice(0,10)}<br />
+                                                    {rowData.ownerFullName}<br />
+                                                    {rowData.licenseNumber}<br />
+                                                    {rowData.type}<br />
+                                                    {rowData.color}<br />
+                                                </div>
+                                                Description: <br /> {rowData.description}
+                                            </div>
+                                            <div className='detail_group'>
+                                                <div className='detail_left'>
+                                                    Case created:<br />
+                                                    Case updated:<br />
+                                                    Officer:
+                                                </div>
+                                                <div className='detail_right'>
+                                                    {rowData.createdAt.slice(0,10)}<br />
+                                                    {rowData.updateAt.slice(0,10)}<br />
+                                                    {officerName}<br />
+                                                </div>
+                                                Resolution: <br /> {rowData.resolution}
+                                            </div>
                                       </div>
                                     )
                                   },

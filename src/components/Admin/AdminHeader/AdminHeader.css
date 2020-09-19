@@ -1,6 +1,8 @@
 header {
     width: 100%;
-    background-color: deepskyblue;
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 10px;
 }
 .header-container {
     text-transform: uppercase;
@@ -12,6 +14,11 @@ header {
     max-width: 1440px;
     margin: 0 auto; 
 }
+
+.officer {
+    margin: 0 10px;
+}
+
 ul {
     list-style: none;
     display: flex;
@@ -19,4 +26,17 @@ ul {
 
 li {
     margin-left: 50px;
+
+}
+
+li a {
+    color:#05736A;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+li a:hover {
+    color: #77D1C7;
+    text-decoration: none;
+    font-weight: bold;
 }

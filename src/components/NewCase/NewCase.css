@@ -1,0 +1,35 @@
+.newcase_form_block {
+    display: flex;
+    margin-bottom: 50px;
+}
+
+select.form_input {
+    border: 0;
+}
+
+.for_select {
+    border-bottom: 1px solid rgba(54, 54, 54, 0.3);
+}
+
+.for_name {
+    width: 66%;
+}
+
+.for_date {
+    width: 94%;
+}
+
+.input_name {
+    width: 100%
+}
+
+textarea.form_input {
+    width: 632px;
+    height: 100px;
+}
+
+.newcase_btn {
+    margin: 0 auto;
+    width: 300px;
+    font-size: 30px;
+}

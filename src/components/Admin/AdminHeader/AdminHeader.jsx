@@ -9,7 +9,7 @@ export const AdminHeader = () => {
     return (
         <header>
             <div className='header-container'>
-                <div>{firstName} {lastName}</div>
+                <div className='officer'>{firstName} {lastName}</div>
                 <nav>
                 <ul className='menu'>
                     <li><Link to="/cases">Cases</Link></li>

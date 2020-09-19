@@ -68,6 +68,13 @@ export class Officers extends Component {
 
                             title='Officers'
 
+                            options={{
+                                headerStyle: {
+                                  backgroundColor: '#0D9488',
+                                  color: '#FFF'
+                                }
+                              }}
+
                             editable={{
 
                             onRowAdd: newData => 

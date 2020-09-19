@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { AdminHeader } from './AdminHeader';
+import './Admin.css';
 
 export class Admin extends Component {
     state = {
@@ -52,22 +53,26 @@ export class Admin extends Component {
         const user = this.state; 
         let errorMsg = '';
         if (!user.auth) {
-            if (user.auth === false) { errorMsg = "Вы ввели неверный логин или пароль. Попробуйте еще раз." }
+            if (user.auth === false) { errorMsg = "You entered wrong email or password. Try again please." }
             return (
-                <div>
-                    {errorMsg}
-                    <form>
-                        <input type="text" name="email" placeholder="Ваш e-mail" onChange={this.handleEmailEnter} value={user.email} /> <br />
-                        <input type="password" name="password" placeholder="Ваш пароль" onChange={this.handlePwdEnter} value={user.password} /> <br />
-                        <input type="button" onClick={this.handleUserAuth} value="LOGIN" disabled={!user.email.length || !user.password.length} />
-                    </form>
+                <div className='form_container form_container__admin'>
+                    
+                    <div className='form_block'>
+                    <div className="errorMsg">{errorMsg}</div>
+                        <label className='form_label'> E-mail
+                            <input className='form_input form_input_email' type="text" name="email" placeholder="Enter your e-mail" onChange={this.handleEmailEnter} size="30" value={user.email} />
+                        </label>
+                        <label className='form_label'> Password
+                            <input className='form_input' type="password" name="password" placeholder="Enter your password" onChange={this.handlePwdEnter} size="30" value={user.password} />
+                        </label>
+                        </div>
+                        <input className='myButton login_btn' type="button" onClick={this.handleUserAuth} value="Login" disabled={!user.email.length || !user.password.length} />
                 </div>
             )}
         } else {
             return (
                 <div>
                     <div><AdminHeader /></div>
-                    <div><h3> Welcome to admin panel </h3></div>
                 </div>
             )
         }

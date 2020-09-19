@@ -1,10 +1,20 @@
-.detail {
-    font-size: 15px;
+.detail_group {
     text-align: 'center';
-    color: white;
-    background-color: blue;
+    color: #444444;
+    background-color: #77D1C7;
+    display: flex;
+    margin-bottom: 10px;
 }
 
-.detail_new {
-    background-color: green;
+.detail_left {
+    text-align: right;
+    width: 150px;
+    padding-right: 5px;
+}
+
+.detail_right {
+    text-align: left;
+    width: 150px;
+    padding-left: 5px;
+    font-weight: bold;
 }

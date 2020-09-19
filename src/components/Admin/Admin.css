@@ -1,0 +1,18 @@
+.form_container__admin {
+    max-width: 300px;
+}
+
+.form_input_email {
+    margin-bottom: 20px;
+}
+
+.login_btn {
+    margin: 0 auto;
+    max-width: 300px;
+    font-size: 30px;
+}
+
+.errorMsg {
+    color: crimson;
+    font-size: 16px;
+}

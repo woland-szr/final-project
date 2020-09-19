@@ -7,13 +7,15 @@ import './Home.css';
 export class Home extends Component {
     render() {
         return (
-            
-            
-            <ul>
-                <li><Link to="/newcase">Tel us about your case</Link></li>
-                <li><Link to="/admin">Officer's enter</Link></li>
-            </ul>
-            
+            <div className='main'>
+                <div className='info'>
+                <h3>Help us find bicycles!</h3>
+                If you rented a bike in our company and it was stolen, please fill out the form below. This will help us find it faster. 
+                <br />Thank you!   
+                </div>
+                <Link to="/newcase" className='myButton'>Tell us about your case</Link>
+                <Link to="/admin" className='myButton admin'>Officer's enter</Link>
+            </div>
         )
     }
 }

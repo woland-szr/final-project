@@ -1,4 +1,5 @@
 import React from 'react';
+import './NewCase.css'
 
 export class NewCase extends React.Component {
     state = {
@@ -59,7 +60,7 @@ export class NewCase extends React.Component {
                 }
             })
         .then(() => {
-            alert('Сообщение создано, благодарим за информацию!');
+            alert('Your case was successfully submitted. Thank you for your information!');
             window.location = "/";
         })
     }
@@ -68,18 +69,35 @@ export class NewCase extends React.Component {
         const newCase  = this.state;
 
         return (
-            <div>
-                <input type="date" name="date" onChange={this.handleDateChange} value={newCase.date} /> <br />
-                <input type="text" name="licenseNumber" placeholder="Рег. номер" onChange={this.handleLicenseNumberChange} value={newCase.licenseNumber} /> <br />
-                <input type="text" name="color" placeholder="Цвет" onChange={this.handleColorChange} value={newCase.color} /> <br />
-                <select name="type" onChange={this.handleTypeChange}> 
-                    <option value="general">General</option>
-                    <option value="sport">Sport</option>
-                </select>
-                <br />
-                <input type="text" name="ownerFullName" placeholder="ФИО" onChange={this.handleOwnerFullNameChange} value={newCase.ownerFullName} /> <br />
-                <textarea name="desc" placeholder="Опишите ваш случай" onChange={this.handleDescChange} value={newCase.desc} /> <br />
-                <input type="button" onClick={this.handleCaseCreate} value="Отправить" disabled={!newCase.desc.length || !newCase.licenseNumber.length || !newCase.color.length || !newCase.ownerFullName.length} />
+            <div className='form_container'>
+                <div className='form_block'>
+                    <div className='newcase_form_block'>
+                <label className='form_label'> License number
+                    <input className='form_input' type="text" name="licenseNumber" placeholder="Enter license number" onChange={this.handleLicenseNumberChange} value={newCase.licenseNumber} />
+                </label>
+                <label className='form_label'> Color
+                    <input className='form_input' type="text" name="color" placeholder="Enter bike color" onChange={this.handleColorChange} value={newCase.color} />
+                </label>
+                <div className='form_label for_select'> Choose bike type <br />
+                    <input className='form_input' type="radio" name="type" id="type1" value="general" defaultChecked onChange={this.handleTypeChange} /> General
+
+                    <input className='form_input' type="radio" name="type" id="type2" value="sport" onChange={this.handleTypeChange} /> Sport
+
+                </div>
+                </div>
+                <div className='newcase_form_block'>
+                <label className='form_label'> Case date
+                    <input className='form_input for_date' type="date" name="date" onChange={this.handleDateChange} value={newCase.date} />
+                </label>
+                <label className='form_label for_name'> Full name
+                    <input className='form_input input_name' type="text" name="ownerFullName" placeholder="Enter your full name" onChange={this.handleOwnerFullNameChange} value={newCase.ownerFullName} />
+                </label>
+                </div>
+                <label className='form_label'> Case details
+                    <textarea className='form_input' name="desc" placeholder="Tell us more about your case" onChange={this.handleDescChange} value={newCase.desc} />
+                </label>
+                </div>
+                <input className='myButton newcase_btn' type="button" onClick={this.handleCaseCreate} value="Submit" disabled={!newCase.desc.length || !newCase.licenseNumber.length || !newCase.color.length || !newCase.ownerFullName.length} />
             </div>
         )
     }
