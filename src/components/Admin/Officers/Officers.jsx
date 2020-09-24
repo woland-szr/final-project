@@ -8,21 +8,20 @@ export class Officers extends Component {
         officers: []
     }
 
-    getOfficers = () => {
+    getOfficers = async () => {
 
         const activeUser = localStorage.getItem('token');
 
-        fetch('http://84.201.129.203:8888/api/officers', {
+        let response = await fetch('http://84.201.129.203:8888/api/officers', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
                 'Authorization': `Bearer ${activeUser}`
             }
         })
-            .then(response => response.json())
-            .then(officers => {
-               this.setState({ officers });
-            });
+        let officers = await response.json()
+        this.setState({ officers });
+            
     }
 
     componentDidMount() {

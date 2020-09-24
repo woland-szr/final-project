@@ -13,32 +13,32 @@ export class NewCase extends React.Component {
 
     handleDateChange = (event) => {
         const date = event.target.value;
-        this.setState({ date: date });
+        this.setState({ date });
     }
 
     handleLicenseNumberChange = (event) => {
         const licenseNumber = event.target.value;
-        this.setState({ licenseNumber: licenseNumber });
+        this.setState({ licenseNumber });
     }
 
     handleColorChange = (event) => {
         const color = event.target.value;
-        this.setState({ color: color });
+        this.setState({ color });
     }
     
     handleTypeChange = (event) => {
         const type = event.target.value;
-        this.setState({ type: type });
+        this.setState({ type });
     }
 
     handleOwnerFullNameChange = (event) => {
         const ownerFullName = event.target.value;
-        this.setState({ ownerFullName: ownerFullName });
+        this.setState({ ownerFullName });
     }
 
     handleDescChange = (event) => {
         const desc = event.target.value;
-        this.setState({ desc: desc });
+        this.setState({ desc });
     }
 
     handleCaseCreate = () => {
