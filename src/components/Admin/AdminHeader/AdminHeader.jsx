@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-one-expression-per-line */
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -10,8 +11,7 @@ export const AdminHeader = () => {
     <header>
       <div className="header-container">
         <div className="officer">
-          {firstName}
-          {lastName}
+          {firstName} {lastName}
         </div>
         <nav>
           <ul className="menu">
