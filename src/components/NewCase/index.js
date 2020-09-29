@@ -1,1 +1,1 @@
-export { NewCase } from './NewCase.jsx';
+export { NewCase } from './NewCase';

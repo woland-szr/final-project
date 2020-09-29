@@ -1,1 +1,1 @@
-export { Cases } from './Cases.jsx'
+export { Cases } from './Cases';

@@ -1,94 +1,102 @@
 body {
-    background-image: url('./assets/background.jpg');
-    background-position: center center; 
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-color: #464646;
-    font-family: 'Montserrat', sans-serif;
+  background-image: url('./assets/background.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #464646;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.info {
+  color: white;
+  border: white solid 2px;
+  border-radius: 20px;
+  background: rgba(100, 100, 100, 0.4);
+  margin: 50px 0 40px;
+  padding-bottom: 35px;
 }
 
 .form_container {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    max-width: 700px;
-    text-align: center;
-    margin: 0 auto;
-    font-size: 30px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-width: 700px;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 30px;
 }
 
 .form_block {
-    display: flex;
-    flex-direction: column;
-    color: white;
-    border: white solid 2px;
-    border-radius: 20px;
-    background: rgba(255,255,255, 0.8);
-    margin: 50px 0 40px;
-    padding: 30px;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  border: white solid 2px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.8);
+  margin: 50px 0 40px;
+  padding: 30px;
 }
 
 .form_label {
-    display: block;
-    width: 33%;
-    font-size: 16px;
-    line-height: 21px;
-    text-align: left;
-    color: rgba(0, 0, 0, 0.8);
+  display: block;
+  width: 33%;
+  font-size: 16px;
+  line-height: 21px;
+  text-align: left;
+  color: rgba(0, 0, 0, 0.8);
 }
 
 .form_input {
-    border: 0;
-    border-bottom: 1px solid rgba(54, 54, 54, 0.3);
-    background: unset;
-    outline: none;
-    font-size: 15px;
-    line-height: 23px;
-    color: #363636;
+  border: 0;
+  border-bottom: 1px solid rgba(54, 54, 54, 0.3);
+  background: unset;
+  outline: none;
+  font-size: 15px;
+  line-height: 23px;
+  color: #363636;
 }
 
-.myButton{
-    box-shadow:inset 0px 1px 0px 0px #ffffff;
-	background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
-	background-color:#ffffff;
-	border-radius:10px;
-	border:1px solid #dcdcdc;
-	display:inline-block;
-	cursor:pointer;
-	color: #666666;;
-	font-weight:bold;
-	padding:6px 24px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #ffffff;
+.myButton {
+  box-shadow: inset 0px 1px 0px 0px #ffffff;
+  background: linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+  background-color: #ffffff;
+  border-radius: 10px;
+  border: 1px solid #dcdcdc;
+  display: inline-block;
+  cursor: pointer;
+  color: #666666;
+  font-weight: bold;
+  padding: 6px 24px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #ffffff;
 }
 .myButton:hover {
-	background:linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
-	background-color:#f6f6f6;
+  background: linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
+  background-color: #f6f6f6;
 }
 .myButton:active {
-	position:relative;
-	top:1px;
+  position: relative;
+  top: 1px;
 }
-
 
 .myButton:disabled {
-    margin: 0 auto;
-    font-size: 30px;
-    color: lightgray;
-    cursor: default;
+  margin: 0 auto;
+  font-size: 30px;
+  color: lightgray;
+  cursor: default;
 }
 
-@media only screen and (max-width : 700px) {
-    .form_input {
-        width: 100%;
-    }
-    .form_label {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-    .form_block {
-        margin-top: 0px;
-        padding: 15px;
-    }
+@media only screen and (max-width: 700px) {
+  .form_input {
+    width: 100%;
+  }
+  .form_label {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .form_block {
+    margin-top: 0px;
+    padding: 15px;
+  }
 }

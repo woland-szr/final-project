@@ -1,1 +1,1 @@
-export { Officers } from './Officers.jsx'
+export { Officers } from './Officers';
